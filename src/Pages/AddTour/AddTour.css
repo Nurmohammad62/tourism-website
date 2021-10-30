@@ -1,0 +1,40 @@
+.add-tour-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 300px;
+}
+
+.add-tour-form form textarea, input{
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #315145;
+}
+
+
+.add-tour-header{
+    color: #315145;
+}
+
+.add-tour-form form .btn-submit{
+    background-color: #FF7F47;;
+    width: 150px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+
+}
+
+.add-tour-form form .btn-submit:hover{
+    background-color: #315145;
+}
+
+@media only screen and (max-width: 600px) {
+    .add-tour-form form input, textarea{
+        width: 80%;
+    }
+}

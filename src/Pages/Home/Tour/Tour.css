@@ -1,0 +1,19 @@
+.tour-price{
+    color: #FF7F47;
+    font-weight: 700;
+}
+.tour-person{
+    color: #FF7F47;
+    font-weight: normal;
+}
+.btn-booking{
+    background-color: #446059;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    transition-duration: 0.4sec;
+}
+.btn-booking:hover{
+    background-color: #FF7F47;
+}

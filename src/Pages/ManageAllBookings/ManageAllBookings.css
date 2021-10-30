@@ -1,0 +1,21 @@
+.booking-manage{
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.btn-update,
+.btn-delete{
+    width: 150px;
+    font-size: 16px;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.btn-update{
+    background-color: #FF7F47;
+}
+.btn-delete{
+    background-color: #BB2D3B;
+}

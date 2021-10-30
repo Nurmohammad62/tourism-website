@@ -1,9 +1,16 @@
 import React from 'react';
+import HomeBanner from './HomeBanner/HomeBanner';
+import Testimonial from './Testimonial/Testimonial';
+import Tours from './Tours/Tours';
+import Trust from './Trust/Trust';
 
 const Home = () => {
     return (
         <div>
-            <h1>This is home page</h1>
+            <HomeBanner></HomeBanner>
+            <Tours></Tours>
+            <Trust></Trust>
+            <Testimonial></Testimonial>
         </div>
     );
 };

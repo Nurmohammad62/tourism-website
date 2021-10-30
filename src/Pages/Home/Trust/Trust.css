@@ -1,0 +1,41 @@
+.section-trust{
+    position: relative;
+    background-image: url('../../../images/achiv-shape.png');
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.overlay h5{
+    color: #FF7F47;
+}
+.overlay h1{
+    color: #262339;
+}
+.achiv-box{
+    display: flex;
+    justify-content: center;
+}
+.achiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #315048;
+    color: #fff;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .achiv-box {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
