@@ -8,21 +8,17 @@ const ManageAllBookings = () => {
     const [bookings, setBookings] = useState([]);
     const [statusPosition, setStatusPosition] = useState(null);
     const [status, setStatus] = useState('');
-
     const handleStatus = (e) => {
-        console.log(e.target.value);
         setStatus(e.target.value);
     }
     // method to update booking status
     const handleUpdateStatus = id => {
-        console.log(status);
         const newStatus = {status};
         axios.put(`https://warm-meadow-52876.herokuapp.com/allBookings/${id}`, newStatus)
         .then(res => {
-            console.log(res);
             if(res.data.acknowledged){
                 alert('Status Updated');
-                setStatusPosition(false);
+                setStatusPosition(true);
             }
         })
     }
@@ -60,7 +56,6 @@ const ManageAllBookings = () => {
                         <p>Phone: {booking.contact}</p>
                         <p>Booking Date: {booking?.date}</p>
                         <p>Status: {booking.status}</p>
-                        
                         {/* Booking status change options */}
                         <div>
                             <select onChange={handleStatus}>
