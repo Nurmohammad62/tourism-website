@@ -1,0 +1,15 @@
+.login-page{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 600px;
+}
+.login-page h1{
+    margin-bottom: 30px;
+}
+.btn-google-login{
+    background-color: #FF7F47;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}

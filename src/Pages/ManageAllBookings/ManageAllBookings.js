@@ -48,24 +48,27 @@ const ManageAllBookings = () => {
     }
 
     return (
-        <Container>
+        <Container className='manage-bookings'>
             <h1 className='text-center'>All Bookings</h1>
-            <Row sm={1} md={2} lg={3}>
+            <Row sm={1} md={2} lg={3} className='g-4'>
                 {
                     bookings.map(booking => <Col className='booking-manage' key={booking._id}>
                         <p>Tour: {booking.tour_name}</p>
+                        <p>Name: {booking.name}</p>
                         <p>Email: {booking.email}</p>
+                        <p>Phone: {booking.contact}</p>
+                        <p>Booking Date: {booking?.date}</p>
                         <p>Status: {booking.status}</p>
                         <div>
                             <select onChange={handleStatus}>
-                                <option value="approved">Approved</option>
-                                <option value="pending">Pending</option>
-                                <option value="processing">Pocessing</option>
-                                <option value="clear">Clear</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Approved">Approved</option>
+                                <option value="Processing">Processing</option>
+                                <option value="Clear">Clear</option>
                             </select>
                             <button onClick={() => handleUpdateStatus(booking._id)} className='btn-update'>Update Status</button>
                         </div>
-                        <button onClick={() => handleDelete(booking._id)} className='btn-delete'>Delete</button>
+                        <button onClick={() => handleDelete(booking._id)} className='btn-delete'>Delete Booking</button>
                     </Col>)
                 }
             </Row>

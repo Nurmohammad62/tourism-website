@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './MyBookings.css';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import useAuth from '../../Hooks/useAuth';
 
 const MyBookings = () => {
@@ -31,11 +31,16 @@ const MyBookings = () => {
     return (
         <div>
             <Container className='mybookings-container'>
+                <h1 className='text-center mt-3'>My Bookings</h1>
                 <Row sm={1} md={2} lg={3} className='g-4'>
+                    
                     {
+                        !myBookings ? <Spinner animation="grow" variant="success" />
+                        :
                         myBookings.map(myBooking => <Col className='p-3 border' key={myBooking._id}>
                             <h4>Tour name: {myBooking.tour_name}</h4>
                             <p>Email: {myBooking.email}</p>
+                            <p>Booking Date: {myBooking?.date}</p>
                             <p>Status: {myBooking.status}</p>
                             <button onClick={() => handleDelete(myBooking._id)} className='btn btn-danger'>Cancel Booking</button>
                         </Col>)

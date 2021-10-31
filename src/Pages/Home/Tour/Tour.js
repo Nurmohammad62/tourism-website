@@ -23,7 +23,7 @@ const Tour = ({tour}) => {
                     {description.slice(0, 200)}
                 </Card.Text>
                 <h3><span className='tour-price'>${price}</span> <span className='tour-person'>/ 3 person</span></h3>
-                <button onClick={() => handlebooking(_id)} className='btn-booking'>{booking_icon} Book the tour</button>
+                <button onClick={() => handlebooking(_id)} className='btn-booking'>{booking_icon} Book this tour</button>
                 </Card.Body>
             </Card>
         </Col>

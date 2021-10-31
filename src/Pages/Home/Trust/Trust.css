@@ -26,11 +26,15 @@
     align-items: center;
     background-color: #315048;
     color: #fff;
-    width: 300px;
+    width: 270px;
     height: 200px;
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
+}
+.achiv .icon{
+    font-size: 49px;
+    color: #fff;
 }
 
 @media only screen and (max-width: 600px) {

@@ -5,7 +5,9 @@
     align-items: center;
     margin-bottom: 300px;
 }
-
+h1{
+    color: #315048;
+}
 .add-tour-form form textarea, input{
     width: 40%;
     padding: 10px;

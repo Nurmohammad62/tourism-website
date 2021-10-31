@@ -15,20 +15,20 @@ const Trust = () => {
                 <h1 className='text-center'>Why You Are Travel With Tourism</h1>
                 <div className="achiv-box">
                     <div className="achiv">
-                        <h1>{guide_icon}</h1>
+                        <i className='icon'>{guide_icon}</i>
                         <h4>2000+ Our worldwide guide</h4>
                     </div>
                     <div className="achiv">
-                        <h1>{travel_icon}</h1>
-                        <h4>100% trusted travel agency</h4>
+                        <i className='icon'>{travel_icon}</i>
+                        <h4>100% trusted travel<br/> agency</h4>
                     </div>
                     <div className="achiv">
-                        <h1>{experiance_icon}</h1>
-                        <h4>10+ year of travel experience</h4>
+                        <i className='icon'>{experiance_icon}</i>
+                        <h4>10+ year of travel<br/> experience</h4>
                     </div>
                     <div className="achiv">
-                        <h1>{happy_icon}</h1>
-                        <h4>90% of our traveller happy</h4>
+                        <i className='icon'>{happy_icon}</i>
+                        <h4>90% of our traveller<br/> happy</h4>
                     </div>
                 </div>
             </div>

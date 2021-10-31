@@ -11,39 +11,59 @@ import Header from './Shared/Header/Header';
 import Login from './Pages/Login/Login';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import React, { useState, useEffect } from "react";
+import { css } from "@emotion/react";
+import DotLoader from "react-spinners/DotLoader";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    },3000)
+  },[]);
+
+  const override = css`
+  display: flex;
+  margin: 100px auto;
+`;
+
   return (
     <div>
-      <AuthProvider>
-        <BrowserRouter>
-          <Header></Header>
-          <Switch>
-            <Route exact path='/'>
-              <Home></Home>
-            </Route>
-            <Route path='/home'>
-              <Home></Home>
-            </Route>
-            <Route path='/booking/:tourId'>
-              <Booking></Booking>
-            </Route>
-            <PrivateRoute path='/myBookings'>
-              <MyBookings></MyBookings>
-            </PrivateRoute>
-            <PrivateRoute path='/manageBookings'>
-              <ManageAllBookings></ManageAllBookings>
-            </PrivateRoute>
-            <PrivateRoute path='/addATour'>
-              <AddTour></AddTour>
-            </PrivateRoute>
-            <Route path='/login'>
-              <Login></Login>
-            </Route>
-          </Switch>
-          <Footer></Footer>
-        </BrowserRouter>
-      </AuthProvider>
+      {isLoading ? <DotLoader color={'#446059'} loading={isLoading} css={override} size={50} />
+      :
+        <AuthProvider>
+          <BrowserRouter>
+            <Header></Header>
+            <Switch>
+              <Route exact path='/'>
+                <Home></Home>
+              </Route>
+              <Route path='/home'>
+                <Home></Home>
+              </Route>
+              <PrivateRoute path='/booking/:tourId'>
+                <Booking></Booking>
+              </PrivateRoute>
+              <PrivateRoute path='/myBookings'>
+                <MyBookings></MyBookings>
+              </PrivateRoute>
+              <PrivateRoute path='/manageBookings'>
+                <ManageAllBookings></ManageAllBookings>
+              </PrivateRoute>
+              <PrivateRoute path='/addATour'>
+                <AddTour></AddTour>
+              </PrivateRoute>
+              <Route path='/login'>
+                <Login></Login>
+              </Route>
+            </Switch>
+            <Footer></Footer>
+          </BrowserRouter>
+        </AuthProvider>
+      }
     </div>
   );
 }

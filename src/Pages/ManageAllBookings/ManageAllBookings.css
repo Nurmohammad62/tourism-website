@@ -1,3 +1,7 @@
+.manage-bookings{
+    margin-top: 50px;
+    margin-bottom: 112px;
+}
 .booking-manage{
     padding: 10px;
     border: 1px solid lightgray;
@@ -9,12 +13,12 @@
     font-size: 16px;
     color: #fff;
     padding: 5px 10px;
-    margin: 10px;
     border: none;
     border-radius: 5px;
 }
 .btn-update{
     background-color: #FF7F47;
+    margin: 10px;
 }
 .btn-delete{
     background-color: #BB2D3B;

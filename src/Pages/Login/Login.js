@@ -1,4 +1,5 @@
 import React from 'react';
+import './Login.css';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
 
@@ -17,9 +18,9 @@ const Login = () => {
         })
     }
     return (
-        <div className='text-center'>
+        <div className='login-page'>
             <h1>Please Login</h1>
-            <button onClick={handleLogin} className='btn btn-warning'>Login with google</button>
+            <button onClick={handleLogin} className='btn-google-login'>Login with google</button>
         </div>
     );
 };

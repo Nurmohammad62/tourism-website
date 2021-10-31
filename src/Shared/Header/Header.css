@@ -1,0 +1,22 @@
+.logo{
+    height: 40px;
+    width: auto;
+}
+.main-navbar{
+    background-color: #315048;
+}
+.nav a{
+    color: #fff;
+}
+.navbar-username{
+    margin-top: 10px;
+    margin-right: 10px;
+    color: #FF7F47;
+}
+.btn-log{
+    background-color: #FF7F47;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+}
