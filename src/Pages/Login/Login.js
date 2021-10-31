@@ -3,6 +3,7 @@ import './Login.css';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
 
+// Login component
 const Login = () => {
     const {signInUsingGoogle, setError} = useAuth();
     const history = useHistory();

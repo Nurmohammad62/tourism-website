@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import firebaseInitialization from "../../Firebase/FirebaseInit";
 
+// firebase initialization
 firebaseInitialization();
 
 const useFirebase = () => {
@@ -12,12 +13,15 @@ const useFirebase = () => {
 
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
+    
+    // Google sign in method
     const signInUsingGoogle = () => {
         setIsLoading(true);
         return signInWithPopup(auth, googleProvider)
         .finally(() => setIsLoading(false))
     }
 
+    // user authentication method
     useEffect(() => {
         onAuthStateChanged(auth, user=> {
             if(user){
@@ -28,8 +32,9 @@ const useFirebase = () => {
             }
             setIsLoading(false);
         })
-    },[])
+    },[]);
 
+    // google user logout method
     const logOut = () => {
         setIsLoading(true);
         signOut(auth)

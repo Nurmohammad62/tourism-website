@@ -4,10 +4,12 @@ import './MyBookings.css';
 import { Col, Container, Row, Spinner } from 'react-bootstrap';
 import useAuth from '../../Hooks/useAuth';
 
+// my bookings page to show a user's bookings
 const MyBookings = () => {
     const {user} = useAuth();
     const [myBookings, setMyBookings] = useState([]);
     const email = user.email;
+    // Load a user's bookings
     useEffect(() => {
         axios.get(`https://warm-meadow-52876.herokuapp.com/myBookings/${email}`)
         .then(result => {
@@ -15,6 +17,7 @@ const MyBookings = () => {
         })
     },[]);
 
+    // Delete method to delete a booking
     const handleDelete = id =>{
         const permission = window.confirm("Are you sure want to cancel the booking");
         if(permission){

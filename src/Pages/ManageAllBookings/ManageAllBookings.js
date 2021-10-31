@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './ManageAllBookings.css';
 import { Col, Container, Row } from 'react-bootstrap';
 
+// Manage all bookings page
 const ManageAllBookings = () => {
     const [bookings, setBookings] = useState([]);
     const [statusPosition, setStatusPosition] = useState(null);
@@ -12,7 +13,7 @@ const ManageAllBookings = () => {
         console.log(e.target.value);
         setStatus(e.target.value);
     }
-
+    // method to update booking status
     const handleUpdateStatus = id => {
         console.log(status);
         const newStatus = {status};
@@ -25,14 +26,14 @@ const ManageAllBookings = () => {
             }
         })
     }
-
+    // useEffect for load all bookings with axios
     useEffect(() => {
         axios.get('https://warm-meadow-52876.herokuapp.com/allBookings')
         .then(res => {
             setBookings(res.data);
         })
     }, [statusPosition]);
-
+    // Delete method to delete a booking
     const handleDelete = id => {
         const permission = window.confirm('Are you sure, want to delete the booking?')
         if(permission){
@@ -59,6 +60,8 @@ const ManageAllBookings = () => {
                         <p>Phone: {booking.contact}</p>
                         <p>Booking Date: {booking?.date}</p>
                         <p>Status: {booking.status}</p>
+                        
+                        {/* Booking status change options */}
                         <div>
                             <select onChange={handleStatus}>
                                 <option value="Pending">Pending</option>

@@ -15,12 +15,12 @@ const Tour = ({tour}) => {
     }
     return (
         <Col sm={12} md={6} lg={4}>
-            <Card>
+            <Card className='tour-card h-100'>
                 <Card.Img variant="top" src={img_url} />
                 <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>
-                    {description.slice(0, 200)}
+                    {description.slice(0, 250)}
                 </Card.Text>
                 <h3><span className='tour-price'>${price}</span> <span className='tour-person'>/ 3 person</span></h3>
                 <button onClick={() => handlebooking(_id)} className='btn-booking'>{booking_icon} Book this tour</button>

@@ -16,6 +16,7 @@ import { css } from "@emotion/react";
 import DotLoader from "react-spinners/DotLoader";
 
 function App() {
+  // codes to show loading spinner before the page loading
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
 
   return (
     <div>
+      {/* Condition to show load spinner */}
       {isLoading ? <DotLoader color={'#446059'} loading={isLoading} css={override} size={50} />
       :
         <AuthProvider>

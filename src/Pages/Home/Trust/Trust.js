@@ -3,6 +3,7 @@ import './Trust.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBreadSlice, faBus, faAmericanSignLanguageInterpreting, faSmileBeam } from '@fortawesome/free-solid-svg-icons';
 
+// Trust component for homepage
 const Trust = () => {
     const guide_icon = <FontAwesomeIcon icon={faBreadSlice} />
     const travel_icon = <FontAwesomeIcon icon={faBus} />

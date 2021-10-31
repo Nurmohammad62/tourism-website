@@ -5,6 +5,7 @@ import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import logo from '../../images/logo/logo.png';
 
+// Header component for main menu
 const Header = () => {
     const history = useHistory();
     const {user, logOut} = useAuth();

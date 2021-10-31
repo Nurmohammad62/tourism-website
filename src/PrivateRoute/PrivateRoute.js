@@ -3,6 +3,7 @@ import { Button, Spinner } from 'react-bootstrap';
 import { Redirect, Route } from 'react-router';
 import useAuth from '../Hooks/useAuth';
 
+// Private route to private some route
 const PrivateRoute = ({children, ...rest}) => {
     const {user, isLoading} = useAuth();
     if(isLoading){

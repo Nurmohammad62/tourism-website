@@ -5,6 +5,8 @@ import axios from 'axios';
 
 const AddTour = () => {
     const { register, handleSubmit, reset } = useForm();
+
+    // POST a new tour with axios
     const onSubmit = data => {
         axios.post('https://warm-meadow-52876.herokuapp.com/tour', data)
         .then(result => {
@@ -15,6 +17,7 @@ const AddTour = () => {
         })
     };
     return (
+        // React hook form to add a new tour
         <div className='add-tour-form'>
             <h1 className='add-tour-header text-center mt-5 mb-5'>Add a new tour</h1>
             <form onSubmit={handleSubmit(onSubmit)}>

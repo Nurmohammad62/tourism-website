@@ -4,6 +4,7 @@ import Testimonial from './Testimonial/Testimonial';
 import Tours from './Tours/Tours';
 import Trust from './Trust/Trust';
 
+// Home page
 const Home = () => {
     return (
         <div>
